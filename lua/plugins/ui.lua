@@ -8,4 +8,13 @@ return {
             vim.cmd([[colorscheme tokyonight]])
         end,
     },
+    {
+        "nvim-tree/nvim-web-devicons",
+        enabled = vim.g.icons_enabled,
+        opts = {},
+    },
+    {
+        "stevearc/dressing.nvim",
+        opts = {},
+    }
 }
