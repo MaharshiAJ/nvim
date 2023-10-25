@@ -49,5 +49,11 @@ return {
     {
         "stevearc/dressing.nvim",
         opts = {},
+    },
+    {
+        "nvim-lualine/lualine.nvim",
+        opts = {
+            theme = "tokyonight"
+        },
     }
 }
