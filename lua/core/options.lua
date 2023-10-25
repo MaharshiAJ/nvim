@@ -29,6 +29,9 @@ local options = {
     g = {
         mapleader = " ", -- Set spacebar as leader key
         maplocalleader = " ", -- Set default local leader key
+        -- Disable Netrw for Nvim tree
+        loaded_netrw = 1,
+        loaded_netrwPlugin = 1,
     },
     t = vim.t.bufs and vim.t.bufs or { bufs = vim.api.nvim_list_bufs() }, -- Initialize buffers for current tab
 }
