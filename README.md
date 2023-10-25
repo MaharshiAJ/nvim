@@ -29,3 +29,8 @@ git clone --depth 1 https://github.com/MaharshiAJ/nvim ~/.config/nvim
 ```
 
 # Plugins Used
+[Lazy Package Manager](https://github.com/folke/lazy.nvim) \
+[Tokyo Night Colorscheme](https://github.com/folke/tokyonight.nvim) \
+[Which Key](https://github.com/folke/which-key.nvim) \
+[Dressing](https://github.com/stevearc/dressing.nvim) \
+[Telescope](https://github.com/nvim-telescope/telescope.nvim)
