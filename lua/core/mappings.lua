@@ -46,6 +46,11 @@ M.mappings =  {
         },
         -- Bufdelete
         ["<Leader>k"] = { function() require("bufdelete").bufdelete(0, true) end, "Delete Current Buffer" },
+        -- Toggleterm
+        ["<Leader>t"] = { function() require("toggleterm").toggle() end, "Toggle Terminal" },
+    },
+    t = {
+        ["<Leader>t"] = { function() require("toggleterm").toggle() end, "Toggle Terminal" },
     }
 }
 
