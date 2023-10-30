@@ -33,5 +33,7 @@ git clone --depth 1 https://github.com/MaharshiAJ/nvim ~/.config/nvim
 [Tokyo Night Colorscheme](https://github.com/folke/tokyonight.nvim) \
 [Which Key](https://github.com/folke/which-key.nvim) \
 [Dressing](https://github.com/stevearc/dressing.nvim) \
-[Telescope](https://github.com/nvim-telescope/telescope.nvim)
-[Nvim Tree](https://github.com/nvim-tree/nvim-tree.lua)
+[Telescope](https://github.com/nvim-telescope/telescope.nvim) \
+[Nvim Tree](https://github.com/nvim-tree/nvim-tree.lua) \
+[Barbar](https://github.com/romgrk/barbar.nvim) \
+[Bufdelete](https://github.com/famiu/bufdelete.nvim)
