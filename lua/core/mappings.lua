@@ -31,8 +31,21 @@ M.mappings =  {
         -- Nvim Tree
         ["<Leader>f"] = {
             name = "+File Explorer",
-            f = { function() require("nvim-tree.api").tree.toggle() end, "Open File Explorer" },
+            t = { function() require("nvim-tree.api").tree.toggle() end, "Toggle File Explorer" },
+            f = { function() require("nvim-tree.api").tree.focus() end, "Focus on File Explorer" },
         },
+        -- Barbar
+        ["<Leader>,"] = { function() require("barbar.api").goto_buffer_relative(-1) end, "Go To Previous Buffer" },
+        ["<Leader>."] = { function() require("barbar.api").goto_buffer_relative(1) end, "Go To Next Buffer" },
+        ["<Leader>b"] = {
+            name = "+Buffers",
+            c = { function() require("barbar.api").close_all_but_current() end, "Close All Buffers Except Current" },
+            r = { function() require("barbar.api").restore_buffer() end, "Restore Buffer" },
+            g = { function(ind) require("barbar.api").goto_buffer(ind) end, "Go To Buffer" },
+            p = { function(buffer_num) require("barbar.api").toggle_pin(buffer_num) end, "Toggle Pin On Buffer" },
+        },
+        -- Bufdelete
+        ["<Leader>k"] = { function() require("bufdelete").bufdelete(0, true) end, "Delete Current Buffer" },
     }
 }
 

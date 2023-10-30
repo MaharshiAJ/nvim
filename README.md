@@ -34,3 +34,4 @@ git clone --depth 1 https://github.com/MaharshiAJ/nvim ~/.config/nvim
 [Which Key](https://github.com/folke/which-key.nvim) \
 [Dressing](https://github.com/stevearc/dressing.nvim) \
 [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+[Nvim Tree](https://github.com/nvim-tree/nvim-tree.lua)
