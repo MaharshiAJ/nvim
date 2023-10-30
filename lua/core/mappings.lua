@@ -49,6 +49,13 @@ M.mappings =  {
         -- Toggleterm
         ["<Leader>t"] = { function() require("toggleterm").toggle() end, "Toggle Terminal" },
     },
+    i = {
+        ["<A-j>"] = { "<Down>", "Move Down"},
+        ["<A-k>"] = { "<Up>", "Move Up"},
+        ["<A-h>"] = { "<Left>", "Move Left"},
+        ["<A-l>"] = { "<Right>", "Move Right"},
+
+    },
     t = {
         ["<Leader>t"] = { function() require("toggleterm").toggle() end, "Toggle Terminal" },
     }
