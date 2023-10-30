@@ -38,4 +38,5 @@ git clone --depth 1 https://github.com/MaharshiAJ/nvim ~/.config/nvim
 [Barbar](https://github.com/romgrk/barbar.nvim) \
 [Bufdelete](https://github.com/famiu/bufdelete.nvim) \
 [Toggleterm](https://github.com/akinsho/toggleterm.nvim) \
-[Cmp](https://github.com/hrsh7th/nvim-cmp) 
+[Cmp](https://github.com/hrsh7th/nvim-cmp) \
+[Autopairs](https://github.com/windwp/nvim-autopairs)
