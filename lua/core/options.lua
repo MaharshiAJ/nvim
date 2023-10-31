@@ -25,13 +25,6 @@ local options = {
         undofile = true, -- Save undo history in a file
         wrap = false, -- Do not wrap lines
         writebackup = false, -- Disable making backup before overwriting a file
-        -- For Windows uncomment the lines below if you want to use powershell instead of command prompt
-		-- shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell"
-		-- shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
-		-- shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait",
-		-- shellpipe = "2>&1 | Out-File -Encoding UTF8 %s, exit $LastExitCode",
-		-- shellquote = "",
-		-- shellxquote = "",
     },
     g = {
         mapleader = " ", -- Set spacebar as leader key
