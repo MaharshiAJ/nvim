@@ -172,6 +172,12 @@ M.mappings = {
 				"Git Diff This",
 			},
 		},
+		["<Leader>c"] = {
+			function()
+				require("Comment.api").toggle.linewise.current()
+			end,
+			"Comment Line",
+		},
 	},
 	i = {
 		["<A-j>"] = { "<Down>", "Move Down" },
