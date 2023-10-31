@@ -38,5 +38,11 @@ git clone --depth 1 https://github.com/MaharshiAJ/nvim ~/.config/nvim
 [Barbar](https://github.com/romgrk/barbar.nvim) \
 [Bufdelete](https://github.com/famiu/bufdelete.nvim) \
 [Toggleterm](https://github.com/akinsho/toggleterm.nvim) \
+[Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) \
 [Cmp](https://github.com/hrsh7th/nvim-cmp) \
 [Autopairs](https://github.com/windwp/nvim-autopairs)
+[Mason](https://github.com/williamboman/mason.nvim) \
+[Mason LspConfig](https://github.com/williamboman/mason-lspconfig.nvim) \
+[Lspconfig](https://github.com/neovim/nvim-lspconfig) \
+[Rust Tools](https://github.com/simrat39/rust-tools.nvim) \
+[Lualine](https://github.com/nvim-lualine/lualine.nvim) \

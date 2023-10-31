@@ -31,6 +31,11 @@ return {
                 highlight_opened_files = "icon",
             },
             on_attach = on_attach,
+            actions = {
+                open_file = {
+                    quit_on_open = true,
+                },
+            },
         })
     end
 }

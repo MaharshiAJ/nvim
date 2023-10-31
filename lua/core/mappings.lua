@@ -31,8 +31,17 @@ M.mappings =  {
         -- Nvim Tree
         ["<Leader>f"] = {
             name = "+File Explorer",
-            t = { function() require("nvim-tree.api").tree.toggle() end, "Toggle File Explorer" },
-            f = { function() require("nvim-tree.api").tree.focus() end, "Focus on File Explorer" },
+            f = { 
+                function()
+                    local currentBuf = vim.api.nvim_get_option_value("filetype", { buf = vim.api.nvim_get_current_buf() })
+                    if currentBuf == "NvimTree" then
+                        require("nvim-tree.api").tree.toggle()
+                    else
+                        require("nvim-tree.api").tree.focus()
+                    end
+                end,
+                "Open File Explorer"
+            },
         },
         -- Barbar
         ["<Leader>,"] = { function() require("barbar.api").goto_buffer_relative(-1) end, "Go To Previous Buffer" },
