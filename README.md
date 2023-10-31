@@ -46,4 +46,7 @@ git clone --depth 1 https://github.com/MaharshiAJ/nvim ~/.config/nvim
 [Lspconfig](https://github.com/neovim/nvim-lspconfig) \
 [Rust Tools](https://github.com/simrat39/rust-tools.nvim) \
 [Lualine](https://github.com/nvim-lualine/lualine.nvim) \
-[Better Escape](https://github.com/max397574/better-escape.nvim)
+[Better Escape](https://github.com/max397574/better-escape.nvim) \
+[Gitsigns](https://github.com/lewis6991/gitsigns.nvim) \
+[Ts Autotag](https://github.com/windwp/nvim-ts-autotag) \
+[Swenv](https://github.com/AckslD/swenv.nvim) \
