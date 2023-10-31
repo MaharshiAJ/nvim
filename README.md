@@ -49,4 +49,4 @@ git clone --depth 1 https://github.com/MaharshiAJ/nvim ~/.config/nvim
 [Better Escape](https://github.com/max397574/better-escape.nvim) \
 [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) \
 [Ts Autotag](https://github.com/windwp/nvim-ts-autotag) \
-[Swenv](https://github.com/AckslD/swenv.nvim) \
+[Swenv](https://github.com/AckslD/swenv.nvim)
