@@ -46,3 +46,4 @@ git clone --depth 1 https://github.com/MaharshiAJ/nvim ~/.config/nvim
 [Lspconfig](https://github.com/neovim/nvim-lspconfig) \
 [Rust Tools](https://github.com/simrat39/rust-tools.nvim) \
 [Lualine](https://github.com/nvim-lualine/lualine.nvim) \
+[Better Escape](https://github.com/max397574/better-escape.nvim)
