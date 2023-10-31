@@ -145,12 +145,6 @@ M.mappings = {
 			end,
 			"Toggle Terminal",
 		},
-		["<Leader>v"] = {
-			function()
-				require("swenv.api").pick_venv()
-			end,
-			"Pick a virtual Environment",
-		},
 		["<Leader>g"] = {
 			name = "+Git",
 			t = {
