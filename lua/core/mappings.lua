@@ -139,12 +139,13 @@ M.mappings = {
 			"Delete Current Buffer",
 		},
 		-- Toggleterm
-		["<Leader>t"] = {
+		["<A-t>"] = {
 			function()
 				require("toggleterm").toggle()
 			end,
 			"Toggle Terminal",
 		},
+		-- Gitsigns
 		["<Leader>g"] = {
 			name = "+Git",
 			t = {
@@ -166,11 +167,19 @@ M.mappings = {
 				"Git Diff This",
 			},
 		},
+		-- Comment
 		["<Leader>c"] = {
 			function()
 				require("Comment.api").toggle.linewise.current()
 			end,
 			"Comment Line",
+		},
+		-- Swenv
+		["<Leader>v"] = {
+			function()
+				require("swenv.api").pick_venv()
+			end,
+			"Pick a Virtual Environment",
 		},
 	},
 	i = {
@@ -184,7 +193,7 @@ M.mappings = {
 		["<A-f>"] = { "<S-Right>", "Cursor One Word Right" },
 	},
 	t = {
-		["<Leader>t"] = {
+		["<A-t>"] = {
 			function()
 				require("toggleterm").toggle()
 			end,
