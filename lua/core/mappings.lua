@@ -174,13 +174,6 @@ M.mappings = {
 			end,
 			"Comment Line",
 		},
-		-- Swenv
-		["<Leader>v"] = {
-			function()
-				require("swenv.api").pick_venv()
-			end,
-			"Pick a Virtual Environment",
-		},
 	},
 	i = {
 		["<A-j>"] = { "<Down>", "Move Down" },
