@@ -21,6 +21,7 @@ return {
 					"pyright",
 					"rust_analyzer",
 					"tsserver",
+					"typst_lsp",
 					"yamlls",
 				},
 				automatic_installation = true,
