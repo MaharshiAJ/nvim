@@ -42,21 +42,41 @@ return {
 		end,
 	},
 	{
-		"nvim-tree/nvim-web-devicons",
-		enabled = vim.g.icons_enabled,
+		"stevearc/dressing.nvim",
 		opts = {},
 	},
 	{
-		"stevearc/dressing.nvim",
-		opts = {},
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		opts = {
+			lsp = {
+				override = {
+					["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+					["vim.lsp.util.stylize_markdown"] = true,
+					["cmp.entry.get_documentation"] = true,
+				},
+			},
+			views = {
+				cmdline_popup = {
+					border = {
+						style = "none",
+						padding = { 2, 3 },
+					},
+					filter_options = {},
+					win_options = {
+						winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
+					},
+				},
+			},
+		},
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+		},
 	},
 	{
 		"nvim-lualine/lualine.nvim",
 		opts = {
 			theme = "tokyonight",
-			sections = {
-				lualine_a = { "swenv" },
-			},
 		},
 	},
 	{
@@ -69,7 +89,7 @@ return {
 			vim.g.barbar_auto_setup = false
 		end,
 		opts = {
-			auto_hide = 0,
+			auto_hide = 1,
 			sidebar_filetypes = {
 				NvimTree = true,
 			},

@@ -1,198 +1,189 @@
-local M = {}
-
-M.mappings = {}
-
-M.mappings = {
+return {
 	n = {
 		-- General
-		["<Leader>w"] = { "<cmd>w!<cr>", "Save File" },
-		["<Leader>q"] = { "<cmd>confirm q<cr>", "Close File" },
+		{ "<Leader>w", "<cmd>w!<cr>", desc = "Save File" },
+		{ "<Leader>q", "<cmd>confirm q<cr>", desc = "Close Buffer" },
 		-- Lazy
-		["<Leader>p"] = {
-			name = "+Plugin Manager",
-			i = {
-				function()
-					require("lazy").install()
-				end,
-				"Install Plugins",
-			},
-			h = {
-				function()
-					require("lazy").home()
-				end,
-				"Lazy Home Page",
-			},
-			s = {
-				function()
-					require("lazy").sync()
-				end,
-				"Sync Plugins",
-			},
-			c = {
-				function()
-					require("lazy").check()
-				end,
-				"Check Plugins Updates",
-			},
-			u = {
-				function()
-					require("lazy").update()
-				end,
-				"Update Plugins",
-			},
+		{ "<Leader>p", group = "+Plugin Manager" },
+		{
+			"<Leader>pi",
+			function()
+				require("lazy").install()
+			end,
+			desc = "Install Plugins",
 		},
-		-- Telescope
-		["<Leader>j"] = {
-			name = "+File",
-			f = {
-				function()
-					require("telescope.builtin").fd()
-				end,
-				"Find Files",
-			},
-			c = {
-				function()
-					require("telescope.builtin").current_buffer_fuzzy_find()
-				end,
-				"Find Files in Current Buffer",
-			},
-			g = {
-				function()
-					require("telescope.builtin").git_files()
-				end,
-				"Find Files Tracked by Git",
-			},
-			m = {
-				function()
-					require("telescope.builtin").git_commits()
-				end,
-				"List Commits for Current Directory",
-			},
-			r = {
-				function()
-					require("telescope.builtin").oldfiles()
-				end,
-				"Open Recent Files",
-			},
+		{
+			"<Leader>ph",
+			function()
+				require("lazy").home()
+			end,
+			desc = "Home Page",
+		},
+		{
+			"<Leader>ps",
+			function()
+				require("lazy").sync()
+			end,
+			desc = "Sync Plugins",
+		},
+		{
+			"<Leader>pc",
+			function()
+				require("lazy").check()
+			end,
+			desc = "Check Updates",
+		},
+		{
+			"<Leader>pu",
+			function()
+				require("lazy").update()
+			end,
+			desc = "Update Plugins",
 		},
 		-- Nvim Tree
-		["<Leader>f"] = {
-			name = "+File Explorer",
-			f = {
-				function()
-					local currentBuf =
-						vim.api.nvim_get_option_value("filetype", { buf = vim.api.nvim_get_current_buf() })
-					if currentBuf == "NvimTree" then
-						require("nvim-tree.api").tree.toggle()
-					else
-						require("nvim-tree.api").tree.focus()
-					end
-				end,
-				"Open File Explorer",
-			},
-		},
-		-- Barbar
-		["<A-,>"] = {
+		{
+			"<Leader>f",
 			function()
-				require("barbar.api").goto_buffer_relative(-1)
+				local currentBuf = vim.api.nvim_get_option_value("filetype", { buf = vim.api.nvim_get_current_buf() })
+				if currentBuf == "NvimTree" then
+					require("nvim-tree.api").tree.toggle()
+				else
+					require("nvim-tree.api").tree.focus()
+				end
 			end,
-			"Go To Previous Buffer",
+			desc = "Open File Explorer",
 		},
-		["<A-.>"] = {
+		-- Telescope
+		{ "<Leader>j", group = "+File" },
+		{
+			"<Leader>jf",
 			function()
-				require("barbar.api").goto_buffer_relative(1)
+				require("telescope.builtin").fd()
 			end,
-			"Go To Next Buffer",
+			desc = "Find Files",
 		},
-		["<Leader>b"] = {
-			name = "+Buffers",
-			c = {
-				function()
-					require("barbar.api").close_all_but_current()
-				end,
-				"Close All Buffers Except Current",
-			},
-			r = {
-				function()
-					require("barbar.api").restore_buffer()
-				end,
-				"Restore Buffer",
-			},
-			g = {
-				function(ind)
-					require("barbar.api").goto_buffer(ind)
-				end,
-				"Go To Buffer",
-			},
-			p = {
-				function(buffer_num)
-					require("barbar.api").toggle_pin(buffer_num)
-				end,
-				"Toggle Pin On Buffer",
-			},
+		{
+			"<Leader>jc",
+			function()
+				require("telescope.builtin").current_buffer_fuzzy_find()
+			end,
+			desc = "Find Files in Current Buffer",
 		},
-		-- Bufdelete
-		["<Leader>k"] = {
+		{
+			"<Leader>jg",
+			function()
+				require("telescope.builtin").git_files()
+			end,
+			desc = "Find Files Tracked by Git",
+		},
+		{
+			"<Leader>jm",
+			function()
+				require("telescope.builtin").git_commits()
+			end,
+			desc = "List Commits for Current Directory",
+		},
+		{
+			"<Leader>jr",
+			function()
+				require("telescope.builtin").oldfiles()
+			end,
+			desc = "Open Recent Files",
+		},
+		-- BufDelete
+		{
+			"<Leader>k",
 			function()
 				require("bufdelete").bufdelete(0, true)
 			end,
-			"Delete Current Buffer",
+			desc = "Delete Current Buffer",
 		},
 		-- Toggleterm
-		["<A-t>"] = {
+		{
+			"<A-t>",
 			function()
 				require("toggleterm").toggle()
 			end,
-			"Toggle Terminal",
+			desc = "Toggle Terminal",
+		},
+		-- Barbar
+		{
+			"<A-,",
+			function()
+				require("barbar.api").goto_buffer_relative(-1)
+			end,
+			desc = "Go to Previous Tab",
+		},
+		{
+			"<A-.",
+			function()
+				require("barbar.api").goto_buffer_relative(1)
+			end,
+			desc = "Go to Next Tab",
+		},
+		{
+			"<Leader>b",
+			group = "+Buffers",
+		},
+		{
+			"<Leader>bc",
+			function()
+				require("barbar.api").close_all_but_current()
+			end,
+			desc = "Close All Tabs Except Current",
+		},
+		{
+			"<Leader>br",
+			function()
+				require("barbar.api").restore_buffer()
+			end,
+			desc = "Restore Tab",
+		},
+		{
+			"<Leader>bg",
+			function(ind)
+				require("barbar.api").goto_buffer(ind)
+			end,
+			desc = "Go To Tab",
+		},
+		{
+			"<Leader>bp",
+			function(num)
+				require("barbar.api").toggle_pin(num)
+			end,
+			desc = "Toggle Pin on Tab",
 		},
 		-- Gitsigns
-		["<Leader>g"] = {
-			name = "+Git",
-			t = {
-				function()
-					require("gitsigns").toggle_signs()
-				end,
-				"Toggle Gitsigns",
-			},
-			d = {
-				function()
-					require("gitsigns").toggle_deleted()
-				end,
-				"Toggle Deleted",
-			},
-			f = {
-				function()
-					require("gitsigns").diffthis()
-				end,
-				"Git Diff This",
-			},
-		},
-		-- Comment
-		["<Leader>c"] = {
+		{ "<Leader>g", group = "+Gitsigns" },
+		{
+			"<Leader>gt",
 			function()
-				require("Comment.api").toggle.linewise.current()
+				require("gitsigns").toggle_signs()
 			end,
-			"Comment Line",
+			desc = "Toggle signs",
 		},
-	},
-	i = {
-		["<A-j>"] = { "<Down>", "Move Down" },
-		["<A-k>"] = { "<Up>", "Move Up" },
-		["<A-h>"] = { "<Left>", "Move Left" },
-		["<A-l>"] = { "<Right>", "Move Right" },
-		["<A-a>"] = { "<Home>", "Go To Beginning of Line" },
-		["<A-s>"] = { "<End>", "Go To End of Line" },
-		["<A-d>"] = { "<S-Left>", "Cursor One Word Left" },
-		["<A-f>"] = { "<S-Right>", "Cursor One Word Right" },
+		{
+			"<Leader>gd",
+			function()
+				require("gitsigns").toggle_deleted()
+			end,
+			desc = "Toggle Deleted",
+		},
+		{
+			"<Leader>gf",
+			function()
+				require("gitsigns").diffthis()
+			end,
+			desc = "Git Diff",
+		},
 	},
 	t = {
-		["<A-t>"] = {
+		{
+			"<A-t>",
 			function()
 				require("toggleterm").toggle()
 			end,
-			"Toggle Terminal",
+			desc = "Toggle Terminal",
 		},
 	},
 }
-
-return M

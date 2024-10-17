@@ -1,7 +1,6 @@
 for _, source in ipairs({
 	"core.options",
 	"core.lazy",
-	"core.mappings",
 }) do
 	local ok, fault = pcall(require, source)
 	if not ok then
@@ -9,5 +8,5 @@ for _, source in ipairs({
 	end
 end
 
-require("core.utils").register_mappings(require("core.mappings").mappings)
-require("core.utils").configure_conda()
+local mappings = require("core.mappings")
+require("core.utils").register_mappings(mappings)
