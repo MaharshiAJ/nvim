@@ -47,5 +47,5 @@ git clone https://github.com/MaharshiAJ/nvim ~/.config/nvim
 [Lualine](https://github.com/nvim-lualine/lualine.nvim) \
 [Better Escape](https://github.com/max397574/better-escape.nvim) \
 [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) \
-[Noice]("https://github.com/folke/noice.nvim") \
-[Conform]("https://github.com/stevearc/conform.nvim") 
+[Noice](https://github.com/folke/noice.nvim) \
+[Conform](https://github.com/stevearc/conform.nvim) 
