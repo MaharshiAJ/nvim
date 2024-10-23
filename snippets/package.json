@@ -1,0 +1,13 @@
+{
+  "name": "custom-snips",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "c"
+        ],
+        "path": "./Languages/cpp.json"
+      }
+    ]
+  }
+}
