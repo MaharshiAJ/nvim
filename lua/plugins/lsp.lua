@@ -13,14 +13,18 @@ return {
 
       mason_lspconfig.setup({
         ensure_installed = {
+          -- C/C++ Development
           "clangd",
           "cmake",
-          "lua_ls",
+          "clang-format",
+          "cmakelang",
+          -- Python Development
           "pyright",
-          "black",
           "isort",
-          "clag-format",
-          "cmake_format",
+          "black",
+          -- Nvim Development
+          "lua_ls",
+          "stylua",
         },
         automatic_installation = true,
       })
@@ -59,5 +63,5 @@ return {
       },
       format_on_save = { timeout_ms = 500 },
     },
-  },
+  }
 }

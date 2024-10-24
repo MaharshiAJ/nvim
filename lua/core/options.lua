@@ -36,10 +36,10 @@ local options = {
   g = {
     mapleader = " ",
     maplocalleader = " ",
-    loaded_netrw = 1,
-    loaded_netrwPlugin = 1,
+    -- The options below disable netrw
+    -- loaded_netrw = 1,
+    -- loaded_netrwPlugin = 1,
   },
-  t = vim.t.bufs and vim.t.bufs or { bufs = vim.api.nvim_list_bufs() },
 }
 
 for scope, table in pairs(options) do

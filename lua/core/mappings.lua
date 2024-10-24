@@ -48,6 +48,13 @@ local mappings = {
   },
   t = {
     ["<A-t>"] = { function() require("toggleterm").toggle() end, "Toggle Integrated Terminal" },
+  },
+  i = {
+    -- Movement
+    ["<A-h>"] = { "<Left>", "Move left" },
+    ["<A-j>"] = { "<Down>", "Move Down" },
+    ["<A-k>"] = { "<Up>", "Move Up" },
+    ["<A-l>"] = { "<Right>", "Move Right" },
   }
 }
 
@@ -56,3 +63,4 @@ for mode, tbl in pairs(mappings) do
     vim.keymap.set(mode, key, mapping[1], { desc = mapping[2] })
   end
 end
+

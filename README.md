@@ -40,7 +40,7 @@ git clone https://github.com/MaharshiAJ/nvim ~/.config/nvim
 [Toggleterm](https://github.com/akinsho/toggleterm.nvim) \
 [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) \
 [Cmp](https://github.com/hrsh7th/nvim-cmp) \
-[Autopairs](https://github.com/windwp/nvim-autopairs)
+[Autopairs](https://github.com/windwp/nvim-autopairs) \
 [Mason](https://github.com/williamboman/mason.nvim) \
 [Mason LspConfig](https://github.com/williamboman/mason-lspconfig.nvim) \
 [Lspconfig](https://github.com/neovim/nvim-lspconfig) \
@@ -48,4 +48,5 @@ git clone https://github.com/MaharshiAJ/nvim ~/.config/nvim
 [Better Escape](https://github.com/max397574/better-escape.nvim) \
 [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) \
 [Noice](https://github.com/folke/noice.nvim) \
-[Conform](https://github.com/stevearc/conform.nvim) 
+[Conform](https://github.com/stevearc/conform.nvim) \
+[Notify](https://github.com/rcarriga/nvim-notify)
