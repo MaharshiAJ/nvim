@@ -4,10 +4,12 @@ return {
     dependencies = {
       "williamboman/mason-lspconfig.nvim",
       "neovim/nvim-lspconfig",
+      "WhoIsSethDaniel/mason-tool-installer.nvim",
     },
     config = function()
       local mason = require("mason")
       local mason_lspconfig = require("mason-lspconfig")
+      local mason_tool_installer = require("mason-tool-installer")
 
       mason.setup()
 
@@ -16,15 +18,12 @@ return {
           -- C/C++ Development
           "clangd",
           "cmake",
-          "clang-format",
-          "cmakelang",
           -- Python Development
           "pyright",
-          "isort",
-          "black",
+          -- "isort",
+          -- "black",
           -- Nvim Development
           "lua_ls",
-          "stylua",
         },
         automatic_installation = true,
       })
@@ -45,6 +44,19 @@ return {
           })
         end,
       })
+
+      mason_tool_installer.setup({
+        ensure_installed = {
+          -- C/C++ Development
+          "clang-format",
+          "cmakelang",
+          -- Python Development
+          "isort",
+          "black",
+          -- Nvim Development
+          "stylua",
+        }
+      })
     end,
   },
   {
@@ -63,5 +75,5 @@ return {
       },
       format_on_save = { timeout_ms = 500 },
     },
-  }
+  },
 }
